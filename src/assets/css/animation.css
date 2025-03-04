@@ -1,0 +1,42 @@
+.explode-circle {
+  animation: explode 0.5s forwards;
+}
+
+.desplode-circle {
+  animation: desplode 0.5s forwards;
+}
+
+@keyframes explode {
+  0% {
+    width: 0px;
+    height: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: var(--primary-color);
+  }
+  100% {
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+    background-color: var(--primary-color);
+  }
+}
+
+@keyframes desplode {
+  0% {
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+    /* background-color: rgba(20, 180, 87, 0.8); */
+    background-color: var(--primary-color);
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: rgba(129, 80, 108, 0.6);
+  }
+}

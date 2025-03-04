@@ -1,17 +1,25 @@
 import React from "react";
 import Container from "../main/container";
 
-function Nav() {
+function Nav({ classes }) {
   return (
     <>
-      <ul className="list-unstyled">
+      <ul className={classes}>
         <li>
           <a href="#"> Home</a>
         </li>
-        <li href="#about">About</li>
-        <li href="#portfolio">Portfolio</li>
-        <li href="#services">Services</li>
-        <li href="#blog">Blog</li>
+        <li href="#about">
+          <a href="#">About</a>
+        </li>
+        <li href="#portfolio">
+          <a href="#">Portfolio</a>
+        </li>
+        <li href="#services">
+          <a href="#">Services</a>
+        </li>
+        <li href="#blog">
+          <a href="#">Blog</a>
+        </li>
       </ul>
     </>
   );

@@ -1,14 +1,152 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
-@import url(./colors.css);
-@import url();
-
-.container {
-  max-width: 1250px;
+@import url("./colors.css");
+@import url("./global.css");
+@import url("./animation.css");
+.baresHeader {
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
 }
-body {
+.baresHeader::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/header/bg.jpg);
+  opacity: 0.12;
+  z-index: 2;
+}
+.baresHeader::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--header-bg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.BarTop {
+  width: 100%;
+  min-height: 55px;
+  background-color: var(--primary-color);
+}
+.baresNav {
+  border-radius: 20px;
   width: 100%;
   height: auto;
-  font-weight: normal;
-  font-family: "Space Grotesk";
+  font-family: "Urbanist";
+  overflow: hidden;
+}
+.BarTop {
+  padding-left: 35px;
+}
+.detailSingle {
+  width: auto;
+  height: 100%;
+  padding-left: 30px;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--textDark);
+}
+.detailSingle p {
+  font-weight: 700;
+}
+.detailSingle.border {
+  padding-right: 30px;
+}
+
+.border {
+  border-right: solid 1px var(--border-gap);
+}
+.socialIcons a {
+  color: var(--textDark);
+  font-size: 14px;
+}
+.baresButtonE {
   position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.baresBtn2:hover {
+  color: var(--textDark);
+  background-color: var(--textDark);
+}
+.baresButton-hover {
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0px;
+  height: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  pointer-events: none;
+}
+.baresButton span:nth-child(1) {
+  position: relative;
+  z-index: 2;
+}
+.baresBtn2 svg {
+  margin-right: 10px;
+}
+.baresBtn2 {
+  height: 100%;
+  background-color: var(--secondary-color);
+  border: 0;
+  color: var(--textLight);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 30px;
+}
+.navInner {
+  width: 100%;
+  min-height: 100px;
+  background-color: var(--textLight);
+  padding: 10px 65px;
+}
+.logo {
+  font-size: 45px;
+  font-weight: 900;
+  color: var(--textDark);
+  font-family: "Space Grotesk";
+}
+.logo img {
+  width: 41px;
+  margin-right: 10px;
+}
+.baresNav ul {
+  list-style: none;
+  gap: 60px;
+}
+.baresNav ul li a {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--header-bg);
+  text-decoration: none;
+}
+.searchIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(241, 241, 241);
+  font-size: 19px;
+  color: rgb(55, 43, 43);
+  cursor: pointer;
+}
+.ant-modal-wrap > div {
+  width: 700px !important;
+}
+.ant-input-group-addon button {
+  background-color: var(--primary-color);
+  color: var(--textDark);
+  font-family: "Space Grotesk";
+}
+.ant-input-group-addon button:hover {
+  background-color: var(--secondary-color) !important;
+  color: var(--textLight) !important;
 }

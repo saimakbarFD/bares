@@ -1,4 +1,8 @@
 :root {
   --primary-color: rgb(255, 136, 81);
-  --secondary-color: ;
+  --secondary-color: rgb(9, 9, 9);
+  --header-bg: rgb(3, 25, 48);
+  --border-gap: rgb(255, 161, 118);
+  --textDark: rgb(0, 0, 0);
+  --textLight: rgb(255, 255, 255);
 }

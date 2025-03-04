@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: auto;
+  font-weight: normal;
+  font-family: "Space Grotesk";
+  position: relative;
+}
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.position-relative {
+  position: relative;
+}
+.zi-3 {
+  z-index: 3;
+}
+.row {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.row-column {
+  flex-direction: column;
+}
+.h-100 {
+  height: 100%;
+}
+.flex-center-start {
+  align-items: center;
+  justify-content: start;
+}
+
+.flex-center-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-center-end {
+  align-items: center;
+  justify-content: end;
+}
+
+.flex-center-between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center-around {
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flex-center-evenly {
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.flex-center-normal {
+  align-items: center;
+  justify-content: normal;
+}
+
+.flex-start-start {
+  align-items: start;
+  justify-content: start;
+}
+
+.flex-start-center {
+  align-items: start;
+  justify-content: center;
+}
+
+.flex-start-end {
+  align-items: start;
+  justify-content: end;
+}
+
+.flex-start-between {
+  align-items: start;
+  justify-content: space-between;
+}
+
+.flex-start-around {
+  align-items: start;
+  justify-content: space-around;
+}
+
+.flex-start-evenly {
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.flex-start-normal {
+  align-items: start;
+  justify-content: normal;
+}
+
+.flex-end-start {
+  align-items: end;
+  justify-content: start;
+}
+
+.flex-end-center {
+  align-items: end;
+  justify-content: center;
+}
+
+.flex-end-end {
+  align-items: end;
+  justify-content: end;
+}
+
+.flex-end-between {
+  align-items: end;
+  justify-content: space-between;
+}
+
+.flex-end-around {
+  align-items: end;
+  justify-content: space-around;
+}
+
+.flex-end-evenly {
+  align-items: end;
+  justify-content: space-evenly;
+}
+
+.flex-end-normal {
+  align-items: end;
+  justify-content: normal;
+}
+
+.flex-stretch-start {
+  align-items: stretch;
+  justify-content: start;
+}
+
+.flex-stretch-center {
+  align-items: stretch;
+  justify-content: center;
+}
+
+.flex-stretch-end {
+  align-items: stretch;
+  justify-content: end;
+}
+
+.flex-stretch-between {
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.flex-stretch-around {
+  align-items: stretch;
+  justify-content: space-around;
+}
+
+.flex-stretch-evenly {
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.flex-stretch-normal {
+  align-items: stretch;
+  justify-content: normal;
+}
+
+.flex-normal-start {
+  align-items: normal;
+  justify-content: start;
+}
+
+.flex-normal-center {
+  align-items: normal;
+  justify-content: center;
+}
+
+.flex-normal-end {
+  align-items: normal;
+  justify-content: end;
+}
+
+.flex-normal-between {
+  align-items: normal;
+  justify-content: space-between;
+}
+
+.flex-normal-around {
+  align-items: normal;
+  justify-content: space-around;
+}
+
+.flex-normal-evenly {
+  align-items: normal;
+  justify-content: space-evenly;
+}
+
+.flex-normal-normal {
+  align-items: normal;
+  justify-content: normal;
+}
+.socialIcons a {
+  padding: 0 15px;
+}
