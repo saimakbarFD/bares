@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url(./colors.css);
+@import url();
+
+.container {
+  max-width: 1250px;
+}
+body {
+  width: 100%;
+  height: auto;
+  font-weight: normal;
+  font-family: "Space Grotesk";
+  position: relative;
+}
