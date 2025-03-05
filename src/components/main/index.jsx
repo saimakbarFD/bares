@@ -3,8 +3,9 @@ import Nav from "../header/nav";
 import Logo from "../header/logo";
 import Container from "./container";
 import Topbar from "../header/topBar";
-import Row from "./row";
 import BaresSearch from "../header/search";
+import Hero from "../sections/hero";
+import Row from "../main/row";
 
 function Index() {
   return (
@@ -20,6 +21,7 @@ function Index() {
             </Row>
           </nav>
         </Container>
+        <Hero />
       </header>
     </>
   );
