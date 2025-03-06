@@ -14,11 +14,14 @@ function Hero() {
     <>
       <Section classes="baresHero baresMargin position-relative zi-3">
         <Container>
-          <Row classes="row flex-center-between">
+          <Row classes=" flex-center-between">
             <Column classes="col-7" gap={{ paddingRight: 24 }}>
-              <Heading Type="h1" classes={""}>
-                Future of Financial & Advisory Services
-              </Heading>
+              <Heading
+                Type="h1"
+                classes={""}
+                title="Future of Financial & Advisory Services"
+                tagLine={false}
+              />
             </Column>
             <Column classes="col-5" gap={{ paddingLeft: 24 }}>
               <div className="row flex-center-center rating">

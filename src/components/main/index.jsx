@@ -6,6 +6,7 @@ import Topbar from "../header/topBar";
 import BaresSearch from "../header/search";
 import Hero from "../sections/hero";
 import Row from "../main/row";
+import Services from "../sections/serviceSection";
 
 function Index() {
   return (
@@ -14,7 +15,7 @@ function Index() {
         <Container>
           <nav className="baresNav">
             <Topbar />
-            <Row classes="row flex-center-between navInner">
+            <Row classes="flex-center-between navInner">
               <Logo />
               <Nav classes="row" />
               <BaresSearch />
@@ -23,6 +24,7 @@ function Index() {
         </Container>
         <Hero />
       </header>
+      <Services />
     </>
   );
 }
