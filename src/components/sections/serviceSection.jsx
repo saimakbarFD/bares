@@ -104,7 +104,7 @@ function Services() {
               and drive meaningful connections. Our digital agency combines
               innovation, strategy, and expertise to fuel.
             </p>
-            <Row>
+            <Row classes="flex-end-start">
               <Column classes="col-6">
                 <Heading
                   Type="h5"
@@ -114,7 +114,7 @@ function Services() {
                 />
               </Column>
               <Column>
-                <BaresList />
+                <BaresList classes="row-column" />
               </Column>
             </Row>
             <BaresBtn classes="baresBtn">

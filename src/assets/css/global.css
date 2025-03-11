@@ -14,6 +14,11 @@ body {
   max-width: 1250px;
   margin: 0 auto;
 }
+
+.mx-auto {
+  margin: 0 auto;
+}
+
 .col-1 {
   width: 8.33%;
 }
@@ -59,6 +64,12 @@ body {
 }
 .position-relative {
   position: relative;
+}
+.zi-1 {
+  z-index: 1;
+}
+.zi-2 {
+  z-index: 2;
 }
 .zi-3 {
   z-index: 3;
@@ -248,9 +259,6 @@ body {
 .flex-normal-normal {
   align-items: normal;
   justify-content: normal;
-}
-.socialIcons a {
-  padding: 0 15px;
 }
 .text-center {
   text-align: center;

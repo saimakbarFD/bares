@@ -7,6 +7,7 @@ import BaresSearch from "../header/search";
 import Hero from "../sections/hero";
 import Row from "../main/row";
 import Services from "../sections/serviceSection";
+import BaresTabs from "../sections/tabs/tabs";
 
 function Index() {
   return (
@@ -25,6 +26,7 @@ function Index() {
         <Hero />
       </header>
       <Services />
+      <BaresTabs />
     </>
   );
 }

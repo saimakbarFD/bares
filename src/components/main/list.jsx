@@ -2,7 +2,7 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-function BaresList() {
+function BaresList({ classes }) {
   const list = [
     {
       text: "Data & Analytics",
@@ -15,7 +15,7 @@ function BaresList() {
   ];
 
   return (
-    <ul className="baresList">
+    <ul className={`baresList ${classes}`}>
       {list.map((single) => {
         return (
           <li>
