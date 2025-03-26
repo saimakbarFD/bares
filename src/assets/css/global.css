@@ -1,13 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Space Grotesk";
 }
 body {
   width: 100%;
   height: auto;
   font-weight: normal;
-  font-family: "Space Grotesk";
   position: relative;
 }
 .container {
