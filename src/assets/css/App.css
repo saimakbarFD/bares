@@ -155,7 +155,12 @@
   min-height: 100vh;
   margin-bottom: 0 !important;
 }
-
+.baresHeading {
+  overflow: hidden;
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: var(--transition);
+}
 h1.baresHeading {
   font-size: 70px;
 }
@@ -225,6 +230,17 @@ h5.baresHeading {
   align-items: start !important;
   justify-content: end !important;
 }
+.swiper-slide::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(/public//images/slider/blurry.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-size: cover;
+}
 .swiper-slide img {
   width: 100%;
   height: 100%;
@@ -252,6 +268,14 @@ h5.baresHeading {
   display: block;
   margin-bottom: 15px;
   font-size: 15px;
+  transform: translateX(-100%);
+  transition: var(--transition);
+  transition-delay: 0.3s;
+}
+.visibleClass span,
+.visibleClass {
+  transform: translateX(0);
+  opacity: 1;
 }
 .borderHeading {
   padding-left: 25px;
@@ -461,13 +485,13 @@ h5.baresHeading {
   height: 100%;
   object-fit: cover;
 }
-.borderTop .projectSingle {
+.borderTop {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   overflow: hidden;
 }
 
-.borderBottom .projectSingle {
+.borderBottom {
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   overflow: hidden;
@@ -575,54 +599,80 @@ h5.baresHeading {
   margin-top: 30px;
   border: solid 3px var(--borderColor);
   border-radius: 10px;
-  height: 180px;
-  display: flex;
-  align-items: center;
+  display: block;
+  transition: var(--transition);
+  padding: 40px 20px;
 }
+
 .tabNumber {
-  width: 100%;
+  width: 75%;
   background-color: var(--borderColor);
-  padding: 20px 30px;
-  font-size: 35px;
+  padding: 15px 25px;
+  font-size: 30px;
   color: var(--textDark);
   font-weight: 800;
   font-family: "Urbanist";
+  transition: var(--transition);
   border-radius: 45px;
+  text-align: center;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.baresTabSingle:hover .tabNumber {
+  height: 180px;
+  background-color: var(--primary-color);
 }
 .baresTabSingle .baresDesc {
   font-weight: 400;
   color: rgb(126, 126, 126);
   margin: 0;
+  font-size: 14px;
 }
+
 .tabTitle .baresDesc {
   color: rgb(126, 126, 126);
   font-weight: bold;
   margin: 0;
 }
+.baresTabSingle:hover .tabLink svg {
+  color: var(--primary-color);
+}
+
+.baresTabSingle:hover .tabLink {
+  border: 0;
+}
+
 .tabLink {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  min-height: 50px;
   border-left: solid 3px var(--borderColor);
 }
+
 .tabLink svg {
-  font-size: 30px;
+  font-size: 25px;
   color: var(--textDark);
   transform: rotate(-30deg);
 }
+
 .tabImg {
   border-radius: 90px;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: 180px;
+  overflow: hidden;
 }
+
 .tabImg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
 }
+
 .tabTags {
   width: max-content;
   height: 42px;
@@ -631,11 +681,11 @@ h5.baresHeading {
   border-radius: 21px;
   font-size: 17px;
   font-weight: bold;
-
   padding: 0 20px;
   background-color: var(--primary-color);
   margin-top: 10px;
 }
+
 .blogSingle {
   width: 100%;
   height: auto;
@@ -787,4 +837,33 @@ textarea.inputField {
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+.baresTabSingle:hover {
+  border-color: var(--primary-color);
+  height: 270px;
+}
+.footerSocial {
+  list-style: none;
+}
+.footerSocial li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.footerSocial li a {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: var(--textDark) !important;
+}
+.footerSocial .icon {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  background-color: var(--primary-color);
+  color: var(--textDark);
+  font-size: 17px;
 }

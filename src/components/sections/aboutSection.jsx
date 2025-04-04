@@ -49,6 +49,7 @@ function About() {
 
             <Col span={8} style={{ paddingLeft: 20, paddingBottom: 20 }}>
               <Image imgSrc="/images/about/about2.jpg" />
+              <br />
               <Image imgSrc="/images/about/about3.jpg" />
             </Col>
           </Row>

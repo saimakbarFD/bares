@@ -22,9 +22,9 @@ function Topbar() {
   ];
 
   return (
-    <Row className="BarTop" justify="space-between" align="middle">
+    <Row className="BarTop" justify="space-between">
       <Col>
-        <Row gutter={[16, 16]} wrap>
+        <Row style={{ height: "100%" }} align={"middle"} gutter={[16, 16]} wrap>
           {TopDetails.map((single, index) => (
             <Col key={index}>
               <Row
@@ -41,7 +41,7 @@ function Topbar() {
         </Row>
       </Col>
       <Col>
-        <Row align="middle" gutter={[16, 16]}>
+        <Row gutter={[16, 16]} style={{ height: "100%" }}>
           <Col>
             <SocialIcon
               childClass="h-100 row flex-center-normal"

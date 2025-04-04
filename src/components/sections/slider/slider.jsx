@@ -7,6 +7,24 @@ import Heading from "../../main/heading";
 import { Col, Row } from "antd";
 // import SwiperGL from "./swiper-gl.esm";
 function Slider() {
+  const slideContent = [
+    {
+      title: "Your biggest business challenges. Solved",
+      tagline: "Drive More Taffic and sales",
+      img: "/images/slider/slide1.jpg",
+    },
+    {
+      title: "Your biggest business challenges. Solved",
+      tagline: "Drive More Taffic and sales",
+      img: "/images/slider/slide1.jpg",
+    },
+    {
+      title: "Your biggest business challenges. Solved",
+      tagline: "Drive More Taffic and sales",
+      img: "/images/slider/slide1.jpg",
+    },
+  ];
+
   return (
     <>
       <div className="HeroSlider baresMargin">
@@ -16,26 +34,30 @@ function Slider() {
           slidesPerView={1}
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          // effect="gl"
-          // onBeforeInit={(swiper) => (swiper.params.gl.shader = "morph-x")}
         >
-          <SwiperSlide>
-            <img src="/images/slider/slide1.jpg" alt="" />
-            <Row justify={"start"} align={"bottom"}>
-              <Col span={12}>
-                {" "}
-                <Heading
-                  Type="h3"
-                  classes="position-relative zi-3"
-                  tagLine="Drive More Taffic and sales"
-                  title="Your biggest business challenges. Solved"
-                />
-              </Col>
-            </Row>
-          </SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <img src="/images/slider/blurry.png" alt="Overlay" />
+          {slideContent.map((single, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <img src={single.img} alt="Slider Image" />
+                <Row
+                  justify={"start"}
+                  align={"bottom"}
+                  style={{ zIndex: 4, position: "relative" }}
+                >
+                  <Col span={14}>
+                    <Heading
+                      Type="h3"
+                      classes="position-relative zi-3"
+                      tagLine={single.tagline}
+                      title={single.title}
+                    />
+                  </Col>
+                </Row>
+              </SwiperSlide>
+            );
+          })}
+
+          {/* <img src="/images/slider/blurry.png" alt="Overlay" /> */}
         </Swiper>
       </div>
     </>

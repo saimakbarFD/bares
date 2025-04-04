@@ -20,39 +20,35 @@ function Project({ type }) {
 
   return (
     <>
-      <Row className="borderTop" gutter={[30, 30]}>
-        {projectContent.map((single, index) => {
-          if (type === single.type) {
-            return (
-              <Col key={index} span={randomCols[Math.floor(Math.random() * 2)]}>
-                <div className="projectSingle">
-                  <img src={single.imgSrc} alt="Tab Image" />
-                  <a href={single.link}>
-                    <FontAwesomeIcon icon={faLink} />
-                  </a>
-                </div>
-              </Col>
-            );
-          }
-          return null;
-        })}
-      </Row>
-      <Row className="borderBottom" gutter={[30, 30]}>
-        {projectContent.map((single, index) => {
-          if (type === single.type) {
-            return (
-              <Col key={index} span={randomCols[Math.floor(Math.random() * 2)]}>
-                <div className="projectSingle">
-                  <img src={single.imgSrc} alt="Tab Image" />
-                  <a href={single.link}>
-                    <FontAwesomeIcon icon={faLink} />
-                  </a>
-                </div>
-              </Col>
-            );
-          }
-          return null;
-        })}
+      <Row gutter={[30, 30]}>
+        {(() => {
+          let totatCols = 0;
+          return projectContent.map((single, index) => {
+            if (type === single.type) {
+              totatCols = totatCols + randomCols[Math.floor(Math.random() * 2)];
+              return (
+                <Col
+                  key={index}
+                  span={randomCols[Math.floor(Math.random() * 2)]}
+                >
+                  <div
+                    className={
+                      totatCols > 24
+                        ? "borderBottom projectSingle"
+                        : "borderTop projectSingle"
+                    }
+                  >
+                    <img src={single.imgSrc} alt="Tab Image" />
+                    <a href={single.link}>
+                      <FontAwesomeIcon icon={faLink} />
+                    </a>
+                  </div>
+                </Col>
+              );
+            }
+            return null;
+          });
+        })()}
       </Row>
     </>
   );

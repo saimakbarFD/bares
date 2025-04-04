@@ -4,9 +4,28 @@ import Container from "../main/container";
 import { Col, Row } from "antd";
 import { height } from "@fortawesome/free-solid-svg-icons/faArrowAltCircleRight";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faLocation,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
+  const footerList = [
+    {
+      icon: faEnvelope,
+      text: "info@demo.com",
+    },
+    {
+      icon: faPhone,
+      text: "+02(0)5958969",
+    },
+    {
+      icon: faLocation,
+      text: "16 tool,lksd. lodon, envlaig",
+    },
+  ];
+
   return (
     <footer className="baresFooter">
       <div className="footerInner">
@@ -23,14 +42,18 @@ function Footer() {
             </Col>
             <Col>
               <ul className="footerSocial">
-                <li>
-                  <a href="#">
-                    <div className="icon">
-                      <FontAwesomeIcon icon={faEnvelope} />
-                    </div>
-                    info@demo.com
-                  </a>
-                </li>
+                {footerList.map((single, index) => {
+                  return (
+                    <li>
+                      <a href="#">
+                        <div className="icon">
+                          <FontAwesomeIcon icon={single.icon} />
+                        </div>
+                        {single.text}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </Col>
           </Row>
@@ -56,7 +79,7 @@ function Footer() {
                 </li>
                 *
                 <li>
-                  <a href="#">Terms & Condition</a>
+                  <a href="#">Privacy Policy</a>
                 </li>
               </ul>
             </Col>
