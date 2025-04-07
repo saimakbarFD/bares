@@ -23,7 +23,7 @@ function BlogSection() {
   ];
 
   return (
-    <Section classes={"baresBlog baresMargin"}>
+    <Section id="blog" classes={"baresBlog baresMargin"}>
       <Container>
         <SectionTag title={"digital marketing"} icon={false} />
         <Heading
@@ -35,7 +35,7 @@ function BlogSection() {
         <Row justify={"center"} align={"middle"} gutter={[40, 40]}>
           {blogContent.map((single, index) => {
             return (
-              <Col span={10}>
+              <Col xl={10} md={24}>
                 <div className="blogSingle">
                   <div className="blogImg">
                     <div className="blogTerms">

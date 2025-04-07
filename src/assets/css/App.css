@@ -37,8 +37,45 @@
   border-radius: 20px;
   width: 100%;
   height: auto;
+  position: relative;
   font-family: "Urbanist";
   overflow: hidden;
+}
+.mobileNav {
+  display: none;
+  text-align: end;
+  margin-right: 20px;
+  color: var(--textDark);
+  font-size: 18px;
+}
+
+.mobileNavInner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  z-index: 99999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mobileNavInner ul {
+  flex-direction: column;
+}
+
+.mobileNavInner ul li a {
+  color: var(--textDark) !important;
+  font-size: 50px !important;
+}
+.mobileNavInner svg {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 40px;
+  cursor: pointer;
 }
 .BarTop {
   padding-left: 35px;
@@ -671,6 +708,16 @@ h5.baresHeading {
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
+}
+
+.stickyNav {
+  z-index: 5;
+  background-color: var(--textLight);
+  transition: 0;
+  position: sticky;
+  box-shadow: 0px 21px 19px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 21px 19px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 21px 19px -10px rgba(0, 0, 0, 0.75);
 }
 
 .tabTags {

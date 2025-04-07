@@ -1,26 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../main/container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
 function Nav({ classes }) {
+  const [mobileNav, setMobileNav] = useState(false);
+
+  const handleNav = () => {
+    setMobileNav(false);
+  };
+
+  const nav = (
+    <ul className={classes}>
+      <li>
+        <a onClick={handleNav} href="#home">
+          Home
+        </a>
+      </li>
+      <li>
+        <a onClick={handleNav} href="#about">
+          About
+        </a>
+      </li>
+      <li>
+        <a onClick={handleNav} href="#portfolio">
+          Portfolio
+        </a>
+      </li>
+      <li>
+        <a onClick={handleNav} href="#services">
+          Services
+        </a>
+      </li>
+      <li>
+        <a onClick={handleNav} href="#blog">
+          Blog
+        </a>
+      </li>
+    </ul>
+  );
+
   return (
     <>
-      <ul className={classes}>
-        <li>
-          <a href="#"> Home</a>
-        </li>
-        <li href="#about">
-          <a href="#">About</a>
-        </li>
-        <li href="#portfolio">
-          <a href="#">Portfolio</a>
-        </li>
-        <li href="#services">
-          <a href="#">Services</a>
-        </li>
-        <li href="#blog">
-          <a href="#">Blog</a>
-        </li>
-      </ul>
+      <div className="desktopNav">{nav}</div>
+
+      <div className="mobileNav">
+        {mobileNav && (
+          <div className="mobileNavInner">
+            {nav}
+            <FontAwesomeIcon
+              onClick={() => setMobileNav(false)}
+              icon={faClose}
+            />
+          </div>
+        )}
+
+        <FontAwesomeIcon onClick={() => setMobileNav(true)} icon={faBars} />
+      </div>
     </>
   );
 }

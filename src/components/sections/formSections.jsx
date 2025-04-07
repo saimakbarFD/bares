@@ -95,7 +95,7 @@ function FormSection() {
           </form>
         </Container>
         <div className="formBg">
-          <Row>
+          <Row style={{ height: "100%" }}>
             <Col span={8}>
               <img className="pattern" src="/images/form/pattern.png" alt="" />
             </Col>

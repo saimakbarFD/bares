@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Row, Col } from "antd"; // Import Ant Design's Row and Col
+import { Row, Col } from "antd";
 import SocialIcon from "../socialIcons/socialIcon";
 import BaresBtn from "../main/button";
 
@@ -24,7 +24,12 @@ function Topbar() {
   return (
     <Row className="BarTop" justify="space-between">
       <Col>
-        <Row style={{ height: "100%" }} align={"middle"} gutter={[16, 16]} wrap>
+        <Row
+          style={{ height: "100%" }}
+          align={"middle"}
+          gutter={{ xl: 16, md: 8 }}
+          wrap
+        >
           {TopDetails.map((single, index) => (
             <Col key={index}>
               <Row
@@ -41,7 +46,7 @@ function Topbar() {
         </Row>
       </Col>
       <Col>
-        <Row gutter={[16, 16]} style={{ height: "100%" }}>
+        <Row gutter={{ xl: 16, md: 8 }} style={{ height: "100%" }}>
           <Col>
             <SocialIcon
               childClass="h-100 row flex-center-normal"

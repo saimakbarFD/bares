@@ -44,7 +44,7 @@ function Slider() {
                   align={"bottom"}
                   style={{ zIndex: 4, position: "relative" }}
                 >
-                  <Col span={14}>
+                  <Col xl={14} md={24}>
                     <Heading
                       Type="h3"
                       classes="position-relative zi-3"

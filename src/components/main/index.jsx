@@ -1,5 +1,5 @@
-import React from "react";
-import { Row, Col } from "antd"; // Import Ant Design's Row and Col
+import React, { useState, useEffect, useRef } from "react";
+import { Row, Col } from "antd";
 import Nav from "../header/nav";
 import Logo from "../header/logo";
 import Container from "./container";
@@ -16,12 +16,38 @@ import FormSection from "../sections/formSections";
 import Footer from "../sections/footer";
 
 function Index() {
+  const [showTopbar, setShowTopbar] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 1000) {
+        setScrollPosition(window.scrollY);
+      } else {
+        setScrollPosition(0);
+      }
+
+      setShowTopbar(window.scrollY < 1000);
+      console.log(scrollPosition);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <header className="baresHeader">
-        <Container style={{ zIndex: 2 }}>
-          <nav class="baresNav">
-            <Topbar />
+      <header id="home" className="baresHeader zi-4">
+        <div className="container position-relative zi-5">
+          <nav
+            className={
+              scrollPosition > 1000
+                ? "baresNav zi-5 stickyNav"
+                : "baresNav zi-5"
+            }
+            // style={{ top: `${scrollPosition}px` }}
+          >
+            {showTopbar && <Topbar />}
 
             <Row justify="space-between" align="middle" className="navInner">
               <Col>
@@ -35,7 +61,7 @@ function Index() {
               </Col>
             </Row>
           </nav>
-        </Container>
+        </div>
         <Hero />
       </header>
       <Services />

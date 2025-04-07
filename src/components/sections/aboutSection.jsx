@@ -14,10 +14,10 @@ import Image from "../main/image";
 function About() {
   return (
     <>
-      <Section classes="baresAbout baresMargin">
+      <Section id="about" classes="baresAbout baresMargin">
         <Container>
           <Row gutter={[20, 20]}>
-            <Col span={16}>
+            <Col xl={16} sm={24}>
               <ServiceTag icon={false} title="digital marketing" />
               <Heading
                 Type="h2"
@@ -30,7 +30,7 @@ function About() {
                 justify="space-between"
                 align="start"
               >
-                <Col span={12} style={{ paddingRight: 20 }}>
+                <Col xl={12} md={24} style={{ paddingRight: 20 }}>
                   <p className="baresDesc textDark">
                     Crafting compelling digital experiences that captivate
                     audiences and drive meaningful connections. Our digital
@@ -41,13 +41,19 @@ function About() {
                     read more <FontAwesomeIcon icon={faArrowAltCircleRight} />
                   </BaresBtn>
                 </Col>
-                <Col span={10}>
+                <Col md={0} xl={10} sm={10} xs={0}>
                   <Image imgSrc="/images/about/about1.jpg" />
                 </Col>
               </Row>
             </Col>
 
-            <Col span={8} style={{ paddingLeft: 20, paddingBottom: 20 }}>
+            <Col
+              xl={8}
+              md={0}
+              xs={0}
+              sm={0}
+              style={{ paddingLeft: 20, paddingBottom: 20 }}
+            >
               <Image imgSrc="/images/about/about2.jpg" />
               <br />
               <Image imgSrc="/images/about/about3.jpg" />

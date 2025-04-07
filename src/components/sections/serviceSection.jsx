@@ -35,7 +35,7 @@ function Services() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <Section>
+    <Section id="services">
       <Container>
         <SectionTag icon={false} title="Digital Marketing" />
         <Heading
@@ -47,7 +47,7 @@ function Services() {
 
         <Row justify="center" gutter={[30, 30]}>
           {serviceData.map((service, index) => (
-            <Col span={8} key={index}>
+            <Col xl={8} md={12} sm={24} key={index}>
               <div
                 className="serviceSingle text-center"
                 onMouseEnter={() => setHoveredIndex(index)}
@@ -76,7 +76,7 @@ function Services() {
         </Row>
 
         <Row className="w-100 baresMargin baresPadding" gutter={[45, 45]}>
-          <Col span={12}>
+          <Col xl={12} md={24}>
             <SectionTag icon={faStar} title="Top Rated Company" />
             <Heading
               Type="h2"
@@ -89,8 +89,8 @@ function Services() {
               and drive meaningful connections. Our digital agency combines
               innovation, strategy, and expertise to fuel growth.
             </p>
-            <Row align="middle">
-              <Col span={12}>
+            <Row gutter={{ md: 16 }} align="middle">
+              <Col xl={12} md={24}>
                 <Heading
                   Type="h5"
                   title="Expect Great Things from Your SEO Agency"
@@ -107,7 +107,7 @@ function Services() {
             </BaresBtn>
           </Col>
 
-          <Col span={12} className="position-relative">
+          <Col xl={12} md={0} sm={0} xs={0} className="position-relative">
             <Image imgSrc="/images/side1.jpg" imgAlt="Side Image" />
             <img className="check" src="/images/check.png" alt="Check" />
           </Col>

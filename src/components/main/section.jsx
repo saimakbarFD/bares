@@ -1,7 +1,11 @@
 import React from "react";
 
-function Section({ children, classes }) {
-  return <section className={classes}>{children}</section>;
+function Section({ children, classes, id }) {
+  return (
+    <section id={id} className={classes}>
+      {children}
+    </section>
+  );
 }
 
 export default Section;

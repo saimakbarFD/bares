@@ -16,41 +16,37 @@ function Project({ type }) {
     { type: "innovative", link: "#", imgSrc: "/images/tabs/tab6.jpg" },
   ];
 
-  const randomCols = [12, 6];
+  const randomCols = [6, 8, 12];
 
   return (
-    <>
-      <Row gutter={[30, 30]}>
-        {(() => {
-          let totatCols = 0;
-          return projectContent.map((single, index) => {
-            if (type === single.type) {
-              totatCols = totatCols + randomCols[Math.floor(Math.random() * 2)];
-              return (
-                <Col
-                  key={index}
-                  span={randomCols[Math.floor(Math.random() * 2)]}
+    <Row gutter={[16, 16]}>
+      {(() => {
+        let totalCols = 0;
+        return projectContent.map((single, index) => {
+          if (type === single.type) {
+            const span =
+              randomCols[Math.floor(Math.random() * randomCols.length)];
+            totalCols += span;
+
+            return (
+              <Col key={index} xs={24} sm={span} md={span} lg={span} xl={span}>
+                <div
+                  className={`projectSingle ${
+                    totalCols > 24 ? "borderBottom" : "borderTop"
+                  }`}
                 >
-                  <div
-                    className={
-                      totatCols > 24
-                        ? "borderBottom projectSingle"
-                        : "borderTop projectSingle"
-                    }
-                  >
-                    <img src={single.imgSrc} alt="Tab Image" />
-                    <a href={single.link}>
-                      <FontAwesomeIcon icon={faLink} />
-                    </a>
-                  </div>
-                </Col>
-              );
-            }
-            return null;
-          });
-        })()}
-      </Row>
-    </>
+                  <img src={single.imgSrc} alt="Tab Image" />
+                  <a href={single.link}>
+                    <FontAwesomeIcon icon={faLink} />
+                  </a>
+                </div>
+              </Col>
+            );
+          }
+          return null;
+        });
+      })()}
+    </Row>
   );
 }
 

@@ -28,7 +28,7 @@ const items = [
 function BaresTabs() {
   return (
     <>
-      <Section classes="baresTabs baresPadding">
+      <Section classes="baresTabs baresPadding" id="portfolio">
         <Container>
           <SectionTag title="digital marketing" />
           <Heading

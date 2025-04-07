@@ -17,7 +17,7 @@ function Hero() {
           justify="space-between"
           align="middle"
         >
-          <Col span={14}>
+          <Col xl={14} md={24}>
             <Heading
               Type="h1"
               classes=""
@@ -25,7 +25,7 @@ function Hero() {
               tagLine={false}
             />
           </Col>
-          <Col span={10}>
+          <Col xl={10} md={24}>
             <div className="row flex-center-center rating">
               <FontAwesomeIcon icon={faStar} />
               4.9

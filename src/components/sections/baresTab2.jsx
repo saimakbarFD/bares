@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 function BaresTab2() {
-  const [hoverIndex, setHoverIndex] = useState(1);
+  const [hoverIndex, setHoverIndex] = useState(null);
 
   const tabContent = [
     {
@@ -50,7 +50,7 @@ function BaresTab2() {
           justify={"center"}
           align={"middle"}
         >
-          <Col span={21}>
+          <Col xl={21} md={24}>
             {tabContent.map((single, index) => (
               <div
                 key={index}
@@ -68,10 +68,10 @@ function BaresTab2() {
                   justify={"start"}
                   align={"middle"}
                 >
-                  <Col span={4}>
+                  <Col xl={4} md={12}>
                     <div className="tabNumber">0{index + 1}.</div>
                   </Col>
-                  <Col span={8}>
+                  <Col xl={8} md={12}>
                     <article className="tabTitle">
                       <p className="baresDesc">{single.tag}</p>
                       <Heading
@@ -87,7 +87,7 @@ function BaresTab2() {
                       )}
                     </article>
                   </Col>
-                  <Col span={8}>
+                  <Col xl={8} md={12}>
                     {hoverIndex === index ? (
                       <div className="tabImg">
                         <img src={single.img} alt="Tab Image" />
@@ -96,7 +96,7 @@ function BaresTab2() {
                       <p className="baresDesc">{single.desc}</p>
                     )}
                   </Col>
-                  <Col span={4}>
+                  <Col xl={4} md={12}>
                     <a href="#" className="tabLink">
                       <FontAwesomeIcon icon={faArrowRight} />
                     </a>

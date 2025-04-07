@@ -76,6 +76,13 @@ body {
 .zi-3 {
   z-index: 3;
 }
+.zi-4 {
+  z-index: 4;
+}
+
+.zi-5 {
+  z-index: 5;
+}
 .row {
   display: flex;
 }

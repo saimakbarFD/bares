@@ -34,7 +34,7 @@ function Footer() {
             <Col>
               <Logo />
             </Col>
-            <Col span={8}>
+            <Col xl={8} md={12} sm={24}>
               <p className="baresDesc textDark">
                 We believe that great design should not be our download will
                 start automatically in 3 to 5 seconds
