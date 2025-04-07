@@ -45,7 +45,7 @@ function Index() {
                 ? "baresNav zi-5 stickyNav"
                 : "baresNav zi-5"
             }
-            style={{ top: `${scrollPosition}px` }}
+            // style={{ top: `${scrollPosition}px` }}
           >
             {showTopbar && <Topbar />}
 
