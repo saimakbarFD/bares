@@ -35,7 +35,7 @@ function BlogSection() {
         <Row justify={"center"} align={"middle"} gutter={[40, 40]}>
           {blogContent.map((single, index) => {
             return (
-              <Col xl={10} md={24}>
+              <Col xl={10} md={24} key={index}>
                 <div className="blogSingle">
                   <div className="blogImg">
                     <div className="blogTerms">

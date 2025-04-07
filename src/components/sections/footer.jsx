@@ -44,7 +44,7 @@ function Footer() {
               <ul className="footerSocial">
                 {footerList.map((single, index) => {
                   return (
-                    <li>
+                    <li key={index}>
                       <a href="#">
                         <div className="icon">
                           <FontAwesomeIcon icon={single.icon} />

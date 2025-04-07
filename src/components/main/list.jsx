@@ -16,9 +16,9 @@ function BaresList({ classes }) {
 
   return (
     <ul className={`baresList ${classes}`}>
-      {list.map((single) => {
+      {list.map((single, index) => {
         return (
-          <li>
+          <li key={index}>
             <FontAwesomeIcon icon={single.icon} />
             {single.text}
           </li>

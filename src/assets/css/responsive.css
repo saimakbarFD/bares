@@ -40,6 +40,9 @@
   }
 }
 @media (max-width: 768px) {
+  .baresTabs .ant-tabs-tab-btn {
+    font-size: 18px;
+  }
   .ant-modal-content {
     width: auto;
   }
