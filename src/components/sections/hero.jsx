@@ -9,7 +9,7 @@ import Slider from "./slider/slider";
 
 function Hero() {
   return (
-    <Section className="baresHero baresMargin position-relative zi-3">
+    <Section className="baresHero1 baresMargin position-relative zi-3">
       <Container>
         <Row
           className="baresMargin"

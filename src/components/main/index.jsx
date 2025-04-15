@@ -14,8 +14,11 @@ import BaresTab2 from "../sections/baresTab2";
 import BlogSection from "../sections/blogSection";
 import FormSection from "../sections/formSections";
 import Footer from "../sections/footer";
+import Hero2 from "../sections/hero2";
+import Hero3 from "../sections/hero3";
+import Hero4 from "../sections/hero4";
 
-function Index() {
+function Index({ type }) {
   const [showTopbar, setShowTopbar] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -35,9 +38,29 @@ function Index() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  let HeroSection;
+
+  switch (type) {
+    case 1:
+      HeroSection = <Hero />;
+      break;
+    case 2:
+      HeroSection = <Hero2 />;
+      break;
+    case 3:
+      HeroSection = <Hero3 />;
+      break;
+    case 4:
+      HeroSection = <Hero4 />;
+      break;
+    default:
+      HeroSection = <Hero />;
+      console.log("default");
+  }
+
   return (
     <>
-      <header id="home" className="baresHeader zi-4">
+      <header id="home" className={`baresHeader zi-4 baresHero${type}`}>
         <div className="container position-relative zi-5">
           <nav
             className={
@@ -62,7 +85,7 @@ function Index() {
             </Row>
           </nav>
         </div>
-        <Hero />
+        {HeroSection}
       </header>
       <Services />
       <BaresTabs />
