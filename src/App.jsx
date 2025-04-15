@@ -4,29 +4,38 @@ import "./assets/css/responsive.css";
 import Index from "./components/main";
 import LoadingScreen from "./components/main/loader";
 import LandingPage from "./landingPage";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import ScrollToTop from "./components/scrollToTop";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
+
   useEffect(() => {
+    // Trigger loading every time location changes
+    setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000); // Adjust duration as needed
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [location]);
+
   return (
     <>
-      <Routes>
-        <Route
-          path="/"
-          element={loading ? <LoadingScreen /> : <LandingPage />}
-        />
-        <Route path="/landing1" element={<Index type={1} />} />
-        <Route path="/landing2" element={<Index type={2} />} />
-        <Route path="/landing3" element={<Index type={3} />} />
-        <Route path="/landing4" element={<Index type={4} />} />
-      </Routes>
+      <ScrollToTop />
+
+      {loading ? (
+        <LoadingScreen />
+      ) : (
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/landing1" element={<Index type={1} />} />
+          <Route path="/landing2" element={<Index type={2} />} />
+          <Route path="/landing3" element={<Index type={3} />} />
+          <Route path="/landing4" element={<Index type={4} />} />
+        </Routes>
+      )}
     </>
   );
 }

@@ -36,7 +36,7 @@ const LandingPage = () => {
   const demos = [
     {
       id: 1,
-      src: "/images/landingPage/pages/index1.jpg",
+      src: "/images/landingPage/pages/index1.png",
       link: "/landing1",
       label: "Landing 1",
     },
@@ -57,12 +57,6 @@ const LandingPage = () => {
       src: "/images/landingPage/pages/index4.png",
       link: "/landing4",
       label: "Landing 4",
-    },
-    {
-      id: 5,
-      src: "/images/landingPage/pages/index5.png",
-      link: "/landing5",
-      label: "Landing 5",
     },
   ];
 
@@ -101,7 +95,7 @@ const LandingPage = () => {
           <Row gutter={[16, 32]} className="mt-5">
             {demos.map((demo) => (
               <Col key={demo.id} xs={24} sm={12} md={8}>
-                <Link to={demo.link}>
+                <Link to={`${demo.link}#`}>
                   <div className="demo">
                     <img src={demo.src} alt="Landing page" />
                   </div>
