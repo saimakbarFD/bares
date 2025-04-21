@@ -12,14 +12,13 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    // Trigger loading every time location changes
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // Adjust duration as needed
+    }, 2000);
 
     return () => clearTimeout(timer);
-  }, [location]);
+  }, [location.pathname]);
 
   return (
     <>

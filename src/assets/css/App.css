@@ -83,9 +83,12 @@
 .tag5 {
   background-color: #60d0fc;
 }
+.baresHero2 {
+  margin-bottom: 100px;
+}
 .baresHero2::before,
 .baresHero2::after {
-  height: 90%;
+  height: 100%;
 }
 .BarTop {
   width: 100%;
@@ -293,7 +296,8 @@ h5.baresHeading {
   font-size: 18px;
   font-weight: 400;
   color: var(--textLight);
-  margin: 15px 0;
+  margin-bottom: 15px;
+  margin-top: 15px;
   line-height: 1.6;
 }
 .HeroSlider {
@@ -776,9 +780,9 @@ h5.baresHeading {
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 0px 21px 19px -10px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 21px 19px -10px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 21px 19px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
 .tabTags {
@@ -1054,8 +1058,21 @@ textarea.inputField {
 .appSingle img {
   width: 65%;
 }
+.baresHero2 > section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.baresHero2 h1.baresHeading {
+  margin: 30px 0;
+  margin-bottom: 10px;
+}
+.baresHero2 .baresDesc {
+  font-size: 24px;
+}
 .baresHero3 {
-  min-height: 100vh;
+  min-height: 90vh;
 }
 .baresHero3 {
   margin-bottom: 100px;
@@ -1066,11 +1083,17 @@ textarea.inputField {
 .baresHero4 > section .container {
   min-height: inherit;
 }
+.baresHero3 .baresDesc {
+  font-size: 20px;
+}
 .baresHero3 > section .container,
 .baresHero4 > section .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.baresHero3 > section .container {
+  justify-content: end;
 }
 .baresHero3::before {
   background-image: url(/images/header/bg2.jpg);

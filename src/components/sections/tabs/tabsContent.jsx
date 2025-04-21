@@ -14,9 +14,12 @@ function Project({ type }) {
     { type: "creative", link: "#", imgSrc: "/images/tabs/tab4.jpg" },
     { type: "ideas", link: "#", imgSrc: "/images/tabs/tab5.jpg" },
     { type: "innovative", link: "#", imgSrc: "/images/tabs/tab6.jpg" },
+    { type: "creative", link: "#", imgSrc: "/images/tabs/tab1.jpg" },
+    { type: "innovative", link: "#", imgSrc: "/images/tabs/tab2.jpg" },
+    { type: "ideas", link: "#", imgSrc: "/images/tabs/tab3.jpg" },
   ];
 
-  const randomCols = [6, 8, 12];
+  const randomCols = [12, 12];
 
   return (
     <Row gutter={[16, 16]}>

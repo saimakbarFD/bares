@@ -52,7 +52,7 @@ function About() {
               md={0}
               xs={0}
               sm={0}
-              style={{ paddingLeft: 20, paddingBottom: 20 }}
+              style={{ alignSelf: "end", paddingLeft: 20, paddingBottom: 20 }}
             >
               <Image imgSrc="/images/about/about2.jpg" />
               <br />
