@@ -28,7 +28,12 @@ function VidoeSection() {
           <Heading
             classes="textCenter"
             Type="h2"
-            title="Let's Create Something Great"
+            title={
+              <>
+                Let's Create
+                <br /> Something Great
+              </>
+            }
           />
           <BaresList classes="flex-center-center textLight" />
           <BaresBtn classes={"baresBtn"}>

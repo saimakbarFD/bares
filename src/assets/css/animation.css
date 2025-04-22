@@ -5,7 +5,17 @@
 .desplode-circle {
   animation: desplode 0.5s forwards;
 }
-
+.heroTag {
+  animation: movingAnim 5s infinite linear;
+}
+@keyframes movingAnim {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
 @keyframes explode {
   0% {
     width: 0px;

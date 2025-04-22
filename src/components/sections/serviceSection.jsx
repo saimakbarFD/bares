@@ -31,19 +31,21 @@ const serviceData = [
   },
 ];
 
-function Services() {
+function Services({ type }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <Section id="services">
       <Container>
         <SectionTag icon={false} title="Digital Marketing" />
-        <Heading
-          Type="h2"
-          tagLine={false}
-          title="We Offer a Wide Range of Brand Services"
-          classes="text-center baresHeading textDark"
-        />
+        {type !== 2 && type !== 3 && (
+          <Heading
+            Type="h2"
+            tagLine={false}
+            title="We Offer a Wide Range of Brand Services"
+            classes="text-center baresHeading textDark"
+          />
+        )}
 
         <Row justify="center" gutter={[30, 30]}>
           {serviceData.map((service, index) => (
@@ -89,7 +91,7 @@ function Services() {
               and drive meaningful connections. Our digital agency combines
               innovation, strategy, and expertise to fuel growth.
             </p>
-            <Row gutter={{ md: 16 }} align="middle">
+            <Row style={{ marginTop: 20 }} gutter={{ md: 16 }} align="middle">
               <Col xl={12} md={24}>
                 <Heading
                   Type="h5"

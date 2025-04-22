@@ -16,7 +16,12 @@ function Hero3() {
             classes={"textDark position-relative zi-4 text-center"}
             Type={"h1"}
             tagLine={false}
-            title={"Transform Text to Design in Minutes, Powered by AI"}
+            title={
+              <>
+                Transform Text to Design in
+                <br /> Minutes, Powered by AI
+              </>
+            }
           />
           <p className="w-75 mx-auto baresDesc position-relative zi-4 text-center textDark">
             You're a startup founder preparing your pitch deck and you want to

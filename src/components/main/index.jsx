@@ -87,7 +87,7 @@ function Index({ type }) {
         </div>
         {HeroSection}
       </header>
-      <Services />
+      <Services type={type} />
       <BaresTabs />
       <About />
       <VidoeSection />

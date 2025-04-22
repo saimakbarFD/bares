@@ -55,7 +55,7 @@
   text-transform: uppercase;
   background-color: red;
   display: flex;
-
+  transform: translateY(0);
   align-items: center;
   justify-content: center;
   color: var(--textLight);
@@ -258,6 +258,7 @@
   overflow: hidden;
   transform: translateX(-50px);
   opacity: 0;
+  line-height: 1.2;
   transition: var(--transition);
 }
 h1.baresHeading {
@@ -274,12 +275,16 @@ h4.baresHeading {
 }
 
 h5.baresHeading {
-  font-size: 25px;
+  font-size: 22px;
 }
 .baresHeading {
   color: var(--textLight);
   font-weight: bold;
-  line-height: 1;
+  line-height: 1.2;
+}
+.baresAbout .baresList {
+  gap: 15px;
+  margin-top: 20px;
 }
 .rating {
   background-color: rgb(252, 204, 66);
@@ -352,6 +357,21 @@ h5.baresHeading {
 .swiper-pagination {
   bottom: 20px !important;
 }
+.ant-tabs-tab {
+  position: relative;
+  display: flex;
+  gap: 25px;
+}
+.ant-tabs-tab::after {
+  content: "*";
+  display: inline-block;
+  font-size: 40px;
+  font-weight: bold;
+}
+.ant-tabs-tab:last-child::after {
+  display: none !important;
+}
+
 .swiper-pagination-bullet {
   border-radius: 50% !important;
   width: 16px !important;
@@ -394,7 +414,7 @@ h5.baresHeading {
 }
 .baresTag {
   border-radius: 15px;
-  background-color: var(--border-gap);
+  background-color: rgb(255, 226, 213);
   height: 30px;
   display: flex;
   align-items: center;
@@ -414,7 +434,8 @@ h5.baresHeading {
   text-transform: capitalize;
   background-color: var(--textLight);
   margin: auto 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0px 7px 95px 0px rgba(0, 0, 0, 0.07);
 }
 .baresTag2 svg {
   font-size: 18px;
@@ -559,7 +580,10 @@ h5.baresHeading {
 .baresTabs .ant-tabs-nav-wrap {
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 0;
+}
+.ant-tabs-tab:nth-child(3)::after {
+  display: none !important;
 }
 .baresTabs .ant-tabs-tab-btn {
   font-size: 35px;
@@ -651,7 +675,10 @@ h5.baresHeading {
   justify-content: center;
   text-align: center;
 }
-
+.baresVideo .baresList svg {
+  color: var(--textLight);
+  font-size: 20px;
+}
 .baresVideo:before {
   content: "";
   width: 100%;

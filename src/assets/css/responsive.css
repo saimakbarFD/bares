@@ -61,8 +61,13 @@
   .tagSection {
     display: none;
   }
-  .baresTabs .ant-tabs-tab-btn {
+  .baresTabs .ant-tabs-tab-btn,
+  .ant-tabs-tab::after {
     font-size: 18px;
+  }
+  .ant-tabs-tab {
+    gap: 5px;
+    margin-left: 5px !important;
   }
   .ant-modal-content {
     width: auto;
