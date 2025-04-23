@@ -31,21 +31,21 @@ const serviceData = [
   },
 ];
 
-function Services({ type }) {
+function Services() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <Section id="services">
       <Container>
         <SectionTag icon={false} title="Digital Marketing" />
-        {type !== 2 && type !== 3 && (
+        {/* {type !== 2 && type !== 3 && (
           <Heading
             Type="h2"
             tagLine={false}
             title="We Offer a Wide Range of Brand Services"
             classes="text-center baresHeading textDark"
           />
-        )}
+        )} */}
 
         <Row justify="center" gutter={[30, 30]}>
           {serviceData.map((service, index) => (

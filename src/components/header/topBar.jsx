@@ -17,7 +17,7 @@ function Topbar() {
     },
     {
       icon: faEnvelope,
-      text: "Bares@gmail.com",
+      text: "company@site.com",
     },
   ];
 
